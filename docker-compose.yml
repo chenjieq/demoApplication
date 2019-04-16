@@ -1,0 +1,6 @@
+#restSpringBoot:
+#  image: springboot/restspring
+#  ports:
+#    - "8070:8070"
+#  links:
+#    - "discovery-server"

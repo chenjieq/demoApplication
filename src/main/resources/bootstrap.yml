@@ -6,13 +6,22 @@ spring:
       discovery:
         service-id: configserver1
         enabled: true
-      profile: dev
-      label: dev
+      profile: pro
+      label: suzhou
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
 
 
 management:
@@ -20,3 +29,7 @@ management:
     web:
       exposure:
         include: bus-refresh, refresh, info, env
+#  security:
+#    enabled: false
+server:
+  port: 8024

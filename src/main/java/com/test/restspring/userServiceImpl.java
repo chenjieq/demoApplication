@@ -23,7 +23,7 @@ public class userServiceImpl {
 
 
         //@Override
-        public User getUser(String name) {
+        public Iterable<User> getUser(String name) {
             Assert.notNull(name, "Name must not be null");
             return this.userRepository.findByName(name);
 
